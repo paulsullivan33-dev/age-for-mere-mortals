@@ -1,0 +1,16 @@
+Plaintext (note.txt):
+The backup drive lives in the blue box on the shelf.
+$ age -r age1jf2fmygfh44vq0zkvdfh5jmtaac9n5t8txk28fz6044hak3fe4fsn9agud -o note.txt.age note.txt
+[exit 0]
+
+The ciphertext is binary; its first bytes name the format:
+age-encryption.org/v1
+-> X25519 cFPcd8covvoQN1ZS3yPA2jrmf8HIljfI2Ol/IDQfyAE
+q4D1hJW0JnwEgpimHG8peZIgeBNZaVmUuelHG9idcHc
+
+
+$ age --decrypt -i alice-key.txt -o note-back.txt note.txt.age
+[exit 0]
+$ diff note.txt note-back.txt
+[exit 0]
+diff is silent: the round trip is byte-for-byte.

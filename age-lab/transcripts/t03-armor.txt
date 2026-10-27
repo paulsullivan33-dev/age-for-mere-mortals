@@ -1,0 +1,14 @@
+$ age --armor -r age1jf2fmygfh44vq0zkvdfh5jmtaac9n5t8txk28fz6044hak3fe4fsn9agud -o note.txt.age.asc note.txt
+[exit 0]
+-----BEGIN AGE ENCRYPTED FILE-----
+YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBMT2tacVJ2ckxwZ3FYcDIv
+ZHJrZXJPV1VoNU9ObDBBOTNOdzB5TWtYOWgwClFNMlZIa2s4dGhXend3S2FWa1NX
+UHQ5MFdmbWVhZXZIbUxFWUpYRDVSUnMKLS0tIEUyVlBzWmZCcklUZmRmbzNzT3Rq
+NE1LSjh4UklPUTdMMXVud3A0MURUdE0K3TzJ445GE6WgavuIQI3G2HTHe4x5attJ
+4E5sk304hF9v7b9tUlhQt1OC89OFED+gF8snBUuTG/qIK+OwUPr98Qz0bfiNYti2
+Db9Ft1T8Xpb3lz4Tgw==
+-----END AGE ENCRYPTED FILE-----
+$ age --decrypt -i alice-key.txt -o note-armor-back.txt note.txt.age.asc
+[exit 0]
+$ diff note.txt note-armor-back.txt
+[exit 0]

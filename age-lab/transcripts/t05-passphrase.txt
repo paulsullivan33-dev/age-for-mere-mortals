@@ -1,0 +1,21 @@
+Encrypting with a passphrase (the lab passphrase is 'sunny-day-42'):
+sunny-day-42
+sunny-day-42
+Enter passphrase (leave empty to autogenerate a secure one): 
+Confirm passphrase: 
+[encrypt exit 0]
+
+Decrypting with the same passphrase:
+sunny-day-42
+Enter passphrase: 
+[decrypt exit 0]
+$ diff note.txt note-pass-back.txt
+[exit 0]
+
+Decrypting with a WRONG passphrase ('rainy-day-99'):
+rainy-day-99
+Enter passphrase: 
+age: error: incorrect passphrase
+age: report unexpected or unhelpful errors at https://filippo.io/age/report
+[wrong-passphrase exit 1]
+ls: cannot access 'should-not-exist.txt': No such file or directory

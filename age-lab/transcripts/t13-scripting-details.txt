@@ -1,0 +1,10 @@
+Encrypting twice to the same -o path:
+$ age -r <alice> -o twice.age note.txt
+[first exit 0]
+$ age -r <alice> -o twice.age note.txt   (again)
+[second exit 0]
+
+Identity handed over on standard input (-i -):
+$ cat alice-key.txt | age -d -i - twice.age
+The backup drive lives in the blue box on the shelf.
+[exit 0]

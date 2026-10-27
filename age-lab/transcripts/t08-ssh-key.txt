@@ -1,0 +1,29 @@
+$ ssh-keygen -t ed25519 -N  -f lab-ssh-key -C age-lab throwaway
+Generating public/private ed25519 key pair.
+Your identification has been saved in lab-ssh-key
+Your public key has been saved in lab-ssh-key.pub
+The key fingerprint is:
+SHA256:4GGvgxdb8/4iyzOs1zGx0LoEwCZjC2xQM9LyR4Cub7c age-lab throwaway
+The key's randomart image is:
++--[ED25519 256]--+
+|=+=o             |
+|++=o=            |
+|o= * .+  .       |
+| .o .o.+. o      |
+|.  .  o.So o     |
+|.    . =oo+      |
+| .  . =o o.o     |
+|  o .. oB.o      |
+| . .E..oo=.o.    |
++----[SHA256]-----+
+[exit 0]
+
+The public half, as one line:
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJIyuPavDgHWgB2f47+EouqtegtsquvqqBP+VSaBeEnG age-lab throwaway
+$ age -r ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJIyuPavDgHWgB2f47+EouqtegtsquvqqBP+VSaBeEnG age-lab throwaway -o note-ssh.age note.txt
+[exit 0]
+Decrypting with the SSH private key as the identity:
+$ age -d -i lab-ssh-key -o note-ssh-back.txt note-ssh.age
+[exit 0]
+$ diff note.txt note-ssh-back.txt
+[exit 0]

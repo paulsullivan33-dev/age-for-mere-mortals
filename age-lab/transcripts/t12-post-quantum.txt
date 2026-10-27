@@ -1,0 +1,29 @@
+$ age-keygen -pq -o pq-key.txt
+Public key: age1pq1qzs3pz0ff86ltpk69g4tj8qtvjnp8z2fjqyyyflmvzjj05tzyvp88l6kj5c95u4ghfh3r35235n6rhv38r4j2r4z50r9yk29z4d8frq28mkff8vdcsmyu2ycdjrzrmrcz9glzh2qykac55extk6v7ep6hh3xqv2qsj6rljrhdaf5wze8r8pr8rhrdw2acstxxtqfryhfc9jtsgh2esd7fat0jadrquqe4lshjaj2hgm9vzr7epkf59me9ncqzkmqarxnnwaep84gsl8cxf99fx2exfw6365zr5guuk0j9z7yvg6338zh5gcg8ckxmnusse5xjtufmdy99hqgzk948gfu5a3tz44tjy00q2utenjvglz8h5hj9q8q6fwf56907acu3zcmkyksnsluwvne6kwzsjpgvy6s0qu05nt3tsak6grj3vjyv20u2hk4zzwf52r4hu9hynvesamgevr0gfle3zwg2enuclav2x0r9csk3svpgnr29fqq9uj3xucfhje03t6fjeha747dfwmepy4k0jpvx9685aqev779nccg7nyznes5yey7kuym9lp5w6unw4ljsvuatjprr9rek3zezpr33y9nwa86xgxgcyf5c2xvaqshpy9vsm97xsluay7fp3dkuspprn549jx9g0ww3p5wawayfqcedrrm5jt6zrayyasn07mrc7pqw2z9kmdldyc77tyhl335k4z2zsdtxn4kz58n8jxpuuwtl0pv5hqsjwvaegdd6s7n3v6c6vgk78wysurrhg5mrz953e7gxuq3zrtg5z0r0xxpud76ya3sgq9tmclseg2yy0xwkd5lwrrdwr62r4trxv7le9504dgxrw722jryz0fyrtd4kkkdrtx43f2ag4ph306vy87yk0tn774usajj56jy9qqvzk3fgcddaj8g9vu9s65rpjpvpwk7kt8348retjmhrv3xry6gzreuwy5uqs4243vq85qjkjrmqlq3wlpmz64d9j5g095nas4vj2njje8z5sfdgjt9jp5rme064kra2cxywxyw3st99uqgp4kuszs30s4fcfwnucgtykp90ylvkwlzzjqyskjpqpw2d6dc8vszkwmckku7hgzvwj7gkf28zq0q0p45rn44ye0jhy346fggtgwhn30pxj9lywe9zwtslc3vry6qynh6y5nqq9kpsc340yfxe9kyhyg0zxqllxemgz6mqh2eajkhxzdmeqy6jz5qs9rajd364a8sdtn9zfn8ypv7pctpcjnknt7cgfj02uy7ypndu56p4sjqdewhs34kg950vd5tj7fjvaa82nayeqjf4xnmzyalctpg2wajhvxpfn6hnjnwufxn47anel636xs58ar7tr8py529ekxx4zmqzyvj9ld4enmrsap8v45g3m9ey0v3cpe9j03xkqzmygucqervtsxkdyaeqgl4s0qygwuxt7aq0aev9vkrxd5djhqz8v5h6lau2n9tjl67x6k6ucd3g0pw5ezkx3cmp8wgqjyfkem7m358ugr2wcmhv570w8t86gla9sf3yrfqgpvjd59swdvy27spfduarnv4xx9xzdavwppdk2gscavs7dy9aplgedfkfxzmg3valnzdedj2lsmr53rxpqfxy3xr5jvl4gjqy5kv4xfccgmfef2kpkmzk6qyyw2hnprc3jaqzesy5y7wrvfrpht5rthzg000az259j59r0q9gsytt0q5dvcwggrteeufcf56czmu5s4xceq0qqvsg9qg9dejdkdpz5g3q0kxfx65jkp3nfjscstrjn33xysa9qmu6vudul2ey5wzd243jtk9hzgmvz56jyclw9qyy3xrrjg7ycnv2lz6ny7d2fhqngapvjmzwyr4yctqcl9a5uk7tn252wkq3jxe3sgx7vu6vya729fztvymvhhek706zuljuva4
+[exit 0]
+# created: 2026-10-27T02:52:55Z
+# public key: age1pq1qzs3pz0ff86ltpk69g4tj8qtvjnp8z2fjqyyyflmvzjj05tzyvp88l6kj5c
+AGE-SECRET-KEY-PQ-1666HP4PZ73SK4XA76JUJ8GVJQVRL4ZSYLCYKXVQH9Y958AFU2R6S6EF40D
+recipient starts: age1pq1qzs3p...
+$ age -r <pq recipient> -o note-pq.age note.txt
+[exit 0]
+$ age -d -i pq-key.txt -o note-pq-back.txt note-pq.age
+[exit 0]
+diff silent: PQ round trip OK
+$ age-inspect note-pq.age
+note-pq.age is an age file, version "age-encryption.org/v1".
+
+This file is encrypted to the following recipient types:
+  - "mlkem768x25519"
+
+This file uses post-quantum encryption.
+
+Size breakdown (assuming it decrypts successfully):
+
+    Header                      1627 bytes
+    Encryption overhead           32 bytes
+    Payload                       53 bytes
+                        -------------------
+    Total                       1712 bytes
+
+Tip: for machine-readable output, use --json.

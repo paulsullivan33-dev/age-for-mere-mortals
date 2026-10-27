@@ -1,0 +1,30 @@
+site_name: age for Mere Mortals
+site_description: A small, modern tool for encrypting files. Making a key pair, encrypting for one person or several, using passphrases and SSH keys, verifying every round trip, and knowing exactly what a lost key costs you.
+site_url: https://paulsullivan33-dev.github.io/age-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What age Is: what-age-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing age: installing-age.md
+  - Your First Encryption: your-first-encryption.md
+  - Key Pairs — Keeping the Identity Safe: key-pairs-and-keeping-the-identity-safe.md
+  - Passphrase Mode: passphrase-mode.md
+  - Encrypting for Several People: encrypting-for-several-people.md
+  - Recipients Files: recipients-files.md
+  - SSH Keys as Recipients: ssh-keys-as-recipients.md
+  - Decrypting and Verifying: decrypting-and-verifying.md
+  - age in Scripts and Backups: age-in-scripts-and-backups.md
+  - Plugins and Hardware Keys: plugins-and-hardware-keys.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

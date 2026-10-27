@@ -1,0 +1,15 @@
+$ age-keygen -y alice-key.txt
+age1jf2fmygfh44vq0zkvdfh5jmtaac9n5t8txk28fz6044hak3fe4fsn9agud
+[exit 0]
+
+Hash the original, then hash a decryption streamed through stdout:
+$ sha256sum note.txt
+d3493ffe3993c141bfe107942846a7bacfafe1c1cd429347dcbdab1bb89dc268  note.txt
+$ age -d -i alice-key.txt note.txt.age | sha256sum
+d3493ffe3993c141bfe107942846a7bacfafe1c1cd429347dcbdab1bb89dc268  -
+
+Encrypt straight from a pipe, no plaintext file on disk:
+$ tar -cf - rota.txt | age -r <alice> -o rota.tar.age
+[exit 0]
+$ age -d -i alice-key.txt rota.tar.age | tar -tvf -
+-rw-rw---- root/root        45 2026-10-27 02:51 rota.txt

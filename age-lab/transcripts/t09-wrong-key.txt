@@ -1,0 +1,10 @@
+$ age-keygen -o carol-key.txt
+Public key: age1lqe0f7nfazyurz2pdjvtak760570d8htnsrxuarkj2uge55e0gsst3a8nj
+[exit 0]
+
+Carol was never a recipient of note.txt.age. Her key must fail:
+$ age -d -i carol-key.txt -o should-not-open.txt note.txt.age
+age: error: no identity matched any of the recipients
+age: report unexpected or unhelpful errors at https://filippo.io/age/report
+[exit 1]
+ls: cannot access 'should-not-open.txt': No such file or directory

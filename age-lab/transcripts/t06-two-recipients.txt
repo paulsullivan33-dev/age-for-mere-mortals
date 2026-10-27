@@ -1,0 +1,16 @@
+$ age-keygen -o bob-key.txt
+Public key: age1ugrvga9y0mmdfv6kz94d3vlpw0yd7npdmheq9rp5e8u4klp8av2schz5kv
+[exit 0]
+
+$ age -r age1jf2fmygfh44vq0zkvdfh5jmtaac9n5t8txk28fz6044hak3fe4fsn9agud -r age1ugrvga9y0mmdfv6kz94d3vlpw0yd7npdmheq9rp5e8u4klp8av2schz5kv -o rota.txt.age rota.txt
+[exit 0]
+Decrypting as Bob (his identity only):
+$ age -d -i bob-key.txt -o rota-bob.txt rota.txt.age
+[exit 0]
+$ diff rota.txt rota-bob.txt
+[exit 0]
+Decrypting as Alice (her identity only):
+$ age -d -i alice-key.txt -o rota-alice.txt rota.txt.age
+[exit 0]
+$ diff rota.txt rota-alice.txt
+[exit 0]

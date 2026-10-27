@@ -1,0 +1,40 @@
+$ age-inspect note.txt.age
+note.txt.age is an age file, version "age-encryption.org/v1".
+
+This file is encrypted to the following recipient types:
+  - "X25519"
+
+This file does NOT use post-quantum encryption.
+
+Size breakdown (assuming it decrypts successfully):
+
+    Header                       168 bytes
+    Encryption overhead           32 bytes
+    Payload                       53 bytes
+                        -------------------
+    Total                        253 bytes
+
+Tip: for machine-readable output, use --json.
+[exit 0]
+
+$ age-inspect note.txt.age.asc
+note.txt.age.asc is an age file, version "age-encryption.org/v1".
+
+This file is ASCII-armored.
+
+This file is encrypted to the following recipient types:
+  - "X25519"
+
+This file does NOT use post-quantum encryption.
+
+Size breakdown (assuming it decrypts successfully):
+
+    Header                       168 bytes
+    Armor overhead               161 bytes
+    Encryption overhead           32 bytes
+    Payload                       53 bytes
+                        -------------------
+    Total                        414 bytes
+
+Tip: for machine-readable output, use --json.
+[exit 0]

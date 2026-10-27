@@ -1,0 +1,16 @@
+$ age --version
+v1.3.2
+[exit 0]
+$ age-keygen --version
+v1.3.2
+[exit 0]
+
+The release ships four everyday tools and three plugins:
+LICENSE
+age
+age-inspect
+age-keygen
+age-plugin-batchpass
+age-plugin-pq
+age-plugin-tag
+age-plugin-tagpq

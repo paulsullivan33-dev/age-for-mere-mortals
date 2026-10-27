@@ -1,0 +1,10 @@
+$ age-keygen -o alice-key.txt
+Public key: age1jf2fmygfh44vq0zkvdfh5jmtaac9n5t8txk28fz6044hak3fe4fsn9agud
+[exit 0]
+
+--- the identity file, exactly as written ---
+# created: 2026-10-27T02:51:52Z
+# public key: age1jf2fmygfh44vq0zkvdfh5jmtaac9n5t8txk28fz6044hak3fe4fsn9agud
+AGE-SECRET-KEY-1A293DP2JKKAGMCU0EK4QCJ4U0M5FV080CFFHN78NWLF935XEKVNQ47880S
+
+The public key is the comment line starting '# public key:'.

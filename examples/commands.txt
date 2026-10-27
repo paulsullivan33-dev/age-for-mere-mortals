@@ -1,0 +1,44 @@
+age for Mere Mortals - the commands, in chapter order
+======================================================
+
+Chapter 3 - install check
+  age --version
+  age-keygen --version
+
+Chapter 4 - first encryption
+  age-keygen -o my-key.txt
+  age -r age1... -o note.txt.age note.txt
+  age --decrypt -i my-key.txt -o note-back.txt note.txt.age
+  diff note.txt note-back.txt
+  age --armor -r age1... -o note.txt.age.asc note.txt
+
+Chapter 5 - key care
+  chmod 600 my-key.txt
+  age-keygen -y my-key.txt        (print the recipient in a key file)
+
+Chapter 6 - passphrase mode
+  age -p -o note.txt.age note.txt     (empty passphrase = autogenerate)
+  age -d -o note.txt note.txt.age
+
+Chapter 7 - several recipients
+  age -r age1ana... -r age1ben... -o rota.txt.age rota.txt
+
+Chapter 8 - recipients files
+  age -R team-recipients.txt -o rota.txt.age rota.txt
+
+Chapter 9 - SSH keys
+  age -r "ssh-ed25519 AAAA..." -o note.txt.age note.txt
+  age -d -i lab-ssh-key -o note.txt note.txt.age
+
+Chapter 10 - verify
+  age-inspect somefile.age
+  sha256sum original
+  age -d -i my-key.txt somefile.age | sha256sum
+
+Chapter 11 - scripts and backups
+  tar -cf - photos/ | age -r age1... -o photos.tar.age
+  age -d -i my-key.txt photos.tar.age | tar -xf -
+  cat key-from-vault | age -d -i - photos.tar.age
+
+Chapter 12 - post-quantum keys
+  age-keygen -pq -o pq-key.txt
